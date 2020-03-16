@@ -1,0 +1,33 @@
+<section class="hero is-fullheight is-primary is-bold">
+    <div class="hero-head">
+        <div class="container">
+            <h1 class="title">Eat Da Burger</h1>
+        </div>
+    </div>
+    <div class="hero-body">
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-vertical is-6">
+                {{#each burger}}
+                {{#unless devoured}}
+                <div class="tile is-child is-link">
+                    <p class="bd-notification has-background-success">{{burger_name}}</p>
+                    <button class="button" data-id="{{this.id}}">Devour Me!</button>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </div>
+            <div class="tile is-parent is-vertical is-6">
+                {{#each burger}}
+                {{#if devoured}}
+                <div class="tile is-child is-warning">
+                    <p class="bd-notification has-background-danger">{{burger_name}}</p>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="hero-foot">
+
+    </div>
+</section>
