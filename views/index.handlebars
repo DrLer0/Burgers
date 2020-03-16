@@ -10,8 +10,8 @@
                 {{#each burger}}
                 {{#unless devoured}}
                 <div class="tile is-child is-link">
-                    <p class="bd-notification has-background-success">{{burger_name}}</p>
-                    <button class="button" data-id="{{this.id}}">Devour Me!</button>
+                    <p class="bd-notification">{{burger_name}}</p>
+                    <button class="devour button" data-id="{{this.id}}">Devour Me!</button>
                 </div>
                 {{/unless}}
                 {{/each}}
@@ -19,8 +19,8 @@
             <div class="tile is-parent is-vertical is-6">
                 {{#each burger}}
                 {{#if devoured}}
-                <div class="tile is-child is-warning">
-                    <p class="bd-notification has-background-danger">{{burger_name}}</p>
+                <div class="tile is-child">
+                    <p class="bd-notification has-background-grey-light">{{burger_name}}</p>
                 </div>
                 {{/if}}
                 {{/each}}
@@ -28,6 +28,14 @@
         </div>
     </div>
     <div class="hero-foot">
-
+        <div class="field">
+            <div class="control">
+                <input class="input" id="burgName" type="text" placeholder="Insert Burger here">
+            </div>
+            <div class="control">
+                <button class="button submit is-danger is-inverted" type="submit" value="Submit">Submit</button>
+            </div>
+            <p class="help">Enter a burger you want to eat! Then press Submit!</p>
+        </div>
     </div>
 </section>
