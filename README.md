@@ -4,3 +4,6 @@
 1. Add more burgers to eat!
 
 ![](public/assets/img/eatDaBurger.gif)
+
+## Technologies used:
+Express, Handlebars, MySQL, AJAX
